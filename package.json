@@ -1,0 +1,19 @@
+{
+  "name": "projet2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClementMrch/projet2.git"
+  },
+  "author": "Clement",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClementMrch/projet2/issues"
+  },
+  "homepage": "https://github.com/ClementMrch/projet2#readme"
+}
