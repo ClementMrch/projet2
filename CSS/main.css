@@ -1,0 +1,662 @@
+@charset "UTF-8";
+/*
+Test scss
+*/
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url(Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(Shrikhand-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  /* box-sizing est appliqué à tous les éléments */
+}
+
+* {
+  font-family: "Raleway-Regular";
+}
+
+/* --------  CSS -------- */
+@media screen and (max-width: 2200px) {
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    animation: homeappears 4s forwards;
+  }
+
+  @keyframes homeappears {
+    0% {
+      opacity: 0;
+    }
+    95% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  /* --------  CSS -------- */
+  .loading-spinner {
+    position: absolute;
+    top: 300px;
+    left: 45%;
+  }
+
+  .lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1);
+    animation-iteration-count: 4;
+  }
+
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+    background: #9356DC;
+  }
+
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+    background: #FF79DA;
+  }
+
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+    background: #9356DC;
+  }
+
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+      transform: scale(0);
+    }
+    50% {
+      top: 24px;
+      height: 32px;
+      transform: scale(1);
+    }
+    100% {
+      top: 24px;
+      height: 32px;
+      transform: scale(0);
+    }
+  }
+  /* Header */
+  header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .boxlogo {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #logo {
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+  }
+
+  /* Location */
+  .location {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 14px;
+    background-color: #e4e4e4;
+    display: flex;
+    justify-content: center;
+  }
+
+  #location-picto {
+    padding: 0 20px 24px 0px;
+    color: rgb(65, 65, 65);
+  }
+
+  /* CTA Explore */
+  .exploring-rest {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f3f3f3;
+    padding: 40px;
+  }
+
+  .cta-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-explore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 70px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px;
+    border-radius: 100px;
+    margin: 20px;
+    transition: 300ms;
+  }
+  .cta-explore:hover {
+    background: linear-gradient(#fc86db, #a066e7);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px;
+  }
+
+  .cta-explore a {
+    text-decoration: none;
+    padding: 20px 30px 20px 30px;
+  }
+
+  .exploring-wording {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Steps */
+  .step-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px;
+  }
+
+  .title-section {
+    padding-bottom: 20px;
+  }
+
+  .step-section-center {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .steps {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 70px;
+    margin-bottom: 24px;
+    margin-right: 15px;
+    box-shadow: 2px 3px 4px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+    background-color: #f3f3f3;
+    position: relative;
+    left: 12px;
+  }
+  .steps:hover span i {
+    color: #9356DC;
+  }
+
+  .steps:hover {
+    background-color: #eee7f7;
+    transition: 0.3s;
+  }
+
+  .steps span {
+    margin-left: 30px;
+  }
+
+  .steps span i {
+    color: rgb(103, 103, 103);
+  }
+
+  .steps-number {
+    width: 24px;
+    height: 24px;
+    background-color: #9356DC;
+    border-radius: 100px;
+    color: #0065FC;
+    position: relative;
+    left: -12px;
+  }
+
+  .number {
+    margin-top: 2px;
+    padding: 0 0 0 8px;
+    font-size: 14px;
+    color: white;
+  }
+
+  /* -------- Hebergement Card --------- */
+  .restaurant-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f3f3f3;
+  }
+
+  .restaurant-section .title-section {
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .restaurant-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 50px;
+  }
+
+  .restaurant-card {
+    min-width: 440px;
+    height: 320px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 20px;
+    background-color: white;
+    margin: 15px;
+  }
+
+  .restaurant-card a {
+    color: black;
+    text-decoration: none;
+    object-fit: contain;
+  }
+
+  .restaurant-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .imgCard {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+
+  .text-card {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .text-card h3 {
+    margin: 16px 0 0 0;
+  }
+
+  .textCard {
+    font-size: 16px;
+    margin-bottom: 4px;
+    padding-left: 16px;
+    margin-top: 8px;
+  }
+
+  .new-restaurant {
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 15px;
+    background-color: #99E2D0;
+    border-radius: 2px;
+    padding: 0 16px 0 16px;
+    height: 36px;
+  }
+
+  .new-restaurant p {
+    color: #359980;
+    font-weight: 600;
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  .love-picto {
+    position: relative;
+    left: 200px;
+    top: 25px;
+    padding-top: 5px;
+  }
+
+  .love-picto-full {
+    position: relative;
+    left: 168px;
+    top: 23px;
+    color: transparent;
+    transition: 400ms;
+    padding-top: 5px;
+    padding-right: 5px;
+    transform: scale(0.6);
+  }
+  .love-picto-full:hover {
+    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.02);
+    transform: translateY(2px);
+  }
+
+  .restaurant-love-picto {
+    position: relative;
+    left: 52px;
+    top: 7px;
+  }
+
+  .restaurant-love-picto-full {
+    position: relative;
+    left: 20px;
+    color: transparent;
+    transition: 400ms;
+    padding-top: 5px;
+    padding-right: 5px;
+    transform: scale(0.6);
+  }
+  .restaurant-love-picto-full:hover {
+    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.02);
+    transform: translateY(2px);
+  }
+
+  /* ------------------------ FOOTER ------------------------- */
+  footer {
+    background-color: #393939;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  footer li {
+    list-style-type: none;
+    padding-top: 10px;
+    display: flex;
+  }
+  footer li i {
+    color: white;
+    padding: 4px 10px 0 0;
+  }
+  footer li h3 {
+    color: white;
+    font-size: 28px;
+    font-family: "Shrikhand";
+    padding-bottom: 20px;
+  }
+  footer li a {
+    text-decoration: none;
+  }
+
+  /* ----------------------  Menu restaurant ---------------------- */
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header i {
+    padding-top: 42px;
+    padding-left: 24px;
+    color: black;
+  }
+
+  .img-screen {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .menu-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 24px 50px 24px;
+    background-color: #f2f2f2;
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+    margin-top: -52px;
+  }
+
+  .restaurant-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .restaurant-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .restaurant-menu-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+    margin-top: 24px;
+  }
+
+  @keyframes itemtranslate {
+    0% {
+      transform: translateY(15px);
+      opacity: 0;
+    }
+  }
+  .menu-card:nth-child(2) {
+    animation: itemtranslate 1s forwards;
+  }
+
+  .menu-card:nth-child(3) {
+    animation: itemtranslate 2s forwards;
+  }
+
+  .menu-card:nth-child(4) {
+    animation: itemtranslate 3s forwards;
+  }
+
+  .menu-card:nth-child(6) {
+    animation: itemtranslate 1s forwards;
+  }
+
+  .menu-card:nth-child(7) {
+    animation: itemtranslate 2s forwards;
+  }
+
+  .menu-card:nth-child(8) {
+    animation: itemtranslate 3s forwards;
+  }
+
+  .menu-card:nth-child(10) {
+    animation: itemtranslate 1s forwards;
+  }
+
+  .menu-card:nth-child(11) {
+    animation: itemtranslate 2s forwards;
+  }
+
+  .menu-card:nth-child(12) {
+    animation: itemtranslate 3s forwards;
+  }
+
+  .menu-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 95%;
+    height: 100px;
+    margin-bottom: 24px;
+    box-shadow: 2px 3px 4px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 22px;
+    background-color: white;
+  }
+  .menu-card:hover .check-box {
+    width: 30%;
+    background-color: #99E2D0;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+  .menu-card:hover .check-box i {
+    color: white;
+    transform: rotate(360deg);
+  }
+
+  .menu-card-title {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .menu-card-title h2 {
+    margin: 10px 4px 6px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .menu-card-title p {
+    margin: 6px 4px 6px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .price {
+    margin: 36px 8px 0 16px;
+  }
+
+  .bar {
+    background-color: #99E2D0;
+    height: 4px;
+    width: 50px;
+    margin-bottom: 18px;
+  }
+
+  .check-box {
+    display: flex;
+    justify-content: center;
+    width: 2%;
+    height: 100%;
+    transition: 600ms;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+
+  .check-box i {
+    justify-items: center;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    transform: rotate(90deg);
+    transition: 600ms;
+  }
+
+  .test-animation-block {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    transform: scale(1);
+    transition: transform 2000ms;
+    transform: translateX(12px);
+  }
+  .test-animation-block:hover {
+    transform: scale(1.8, 1);
+  }
+
+  .test-animation {
+    background-color: #9356DC;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  .test-animation:hover {
+    background-color: #99E2D0;
+  }
+
+  /* Title */
+  h1 {
+    font-family: "Raleway-Bold";
+    font-size: 28px;
+  }
+
+  h2 {
+    font-family: "Raleway-SemiBold";
+  }
+
+  h3 {
+    color: black;
+    font-family: "Raleway-SemiBold";
+  }
+
+  h4 {
+    font-family: "Raleway-SemiBold";
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  h5 {
+    color: black;
+    font-family: "Raleway";
+    font-weight: 350;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  /* 
+  p
+  {
+      font-size: 20px;
+      color: black;
+      transform: none;
+      display: flex;
+
+  }
+
+  Title */
+}
+
+/*# sourceMappingURL=main.css.map */
